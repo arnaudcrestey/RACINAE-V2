@@ -1,0 +1,15 @@
+:root {
+  --font-heading-weight: 600;
+  --font-body-weight: 400;
+  --line-height-tight: 1.08;
+  --line-height-title: 1.14;
+  --line-height-body: 1.65;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.text-balance-pretty {
+  text-wrap: pretty;
+}

@@ -1,0 +1,71 @@
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --background: var(--racinae-cream);
+  --foreground: var(--racinae-ink);
+  --card: var(--racinae-surface);
+  --card-foreground: var(--racinae-ink);
+  --popover: var(--racinae-surface);
+  --popover-foreground: var(--racinae-ink);
+  --primary: var(--racinae-brown);
+  --primary-foreground: var(--racinae-surface);
+  --secondary: color-mix(in oklch, var(--racinae-accent) 34%, var(--racinae-surface));
+  --secondary-foreground: var(--racinae-ink);
+  --muted: color-mix(in oklch, var(--racinae-accent) 22%, var(--racinae-surface));
+  --muted-foreground: var(--racinae-muted);
+  --accent: var(--racinae-accent);
+  --accent-foreground: var(--racinae-ink);
+  --life: var(--racinae-life);
+  --life-foreground: var(--racinae-surface);
+  --destructive: oklch(0.56 0.18 28);
+  --destructive-foreground: var(--racinae-surface);
+  --border: color-mix(in oklch, var(--racinae-brown) 16%, transparent);
+  --input: color-mix(in oklch, var(--racinae-brown) 20%, transparent);
+  --ring: color-mix(in oklch, var(--racinae-brown) 60%, var(--racinae-accent));
+  --overlay: rgb(34 34 34 / 42%);
+  --sidebar: color-mix(in oklch, var(--racinae-cream) 88%, var(--racinae-surface));
+  --sidebar-foreground: var(--racinae-ink);
+  --sidebar-primary: var(--racinae-brown);
+  --sidebar-primary-foreground: var(--racinae-surface);
+  --sidebar-accent: color-mix(in oklch, var(--racinae-accent) 32%, var(--racinae-surface));
+  --sidebar-accent-foreground: var(--racinae-ink);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --background: #181512;
+  --foreground: #f8f2eb;
+  --card: #211d19;
+  --card-foreground: #f8f2eb;
+  --popover: #211d19;
+  --popover-foreground: #f8f2eb;
+  --primary: #d8c1a8;
+  --primary-foreground: #211d19;
+  --secondary: #302923;
+  --secondary-foreground: #f8f2eb;
+  --muted: #2a2520;
+  --muted-foreground: #b9ab9f;
+  --accent: #5f4c3d;
+  --accent-foreground: #f8f2eb;
+  --life: #9bb896;
+  --life-foreground: #161812;
+  --destructive: oklch(0.68 0.17 28);
+  --destructive-foreground: #181512;
+  --border: rgb(248 242 235 / 12%);
+  --input: rgb(248 242 235 / 16%);
+  --ring: #d8c1a8;
+  --overlay: rgb(0 0 0 / 54%);
+  --sidebar: #1d1915;
+  --sidebar-foreground: #f8f2eb;
+  --sidebar-primary: #d8c1a8;
+  --sidebar-primary-foreground: #211d19;
+  --sidebar-accent: #302923;
+  --sidebar-accent-foreground: #f8f2eb;
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}

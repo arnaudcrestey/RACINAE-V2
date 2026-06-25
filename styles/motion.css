@@ -1,0 +1,98 @@
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  .racinae-fade-in {
+    animation: racinae-fade-in var(--duration-slow) var(--ease-racinae) both;
+  }
+
+  .racinae-rise-in {
+    animation: racinae-rise-in 720ms var(--ease-racinae) both;
+  }
+
+  .racinae-soft-reveal {
+    animation: racinae-soft-reveal 900ms var(--ease-racinae) both;
+  }
+
+  .racinae-tree-float {
+    animation:
+      racinae-soft-reveal 900ms var(--ease-racinae) both,
+      racinae-tree-float 7s ease-in-out 900ms infinite;
+  }
+
+  .racinae-memory-float {
+    animation:
+      racinae-soft-reveal 900ms var(--ease-racinae) 120ms both,
+      racinae-memory-float 8s ease-in-out 1s infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+@keyframes racinae-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.375rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes racinae-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes racinae-soft-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes racinae-tree-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.45rem);
+  }
+}
+
+@keyframes racinae-memory-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-0.35rem) rotate(-0.35deg);
+  }
+}
