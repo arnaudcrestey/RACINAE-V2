@@ -58,9 +58,9 @@ export default function RootLayout({
       className={`${inter.variable} ${cormorant.variable}`}
       suppressHydrationWarning
     >
-      <body>
-        <RootProviders>{children}</RootProviders>
-      </body>
+      <body className="min-h-dvh bg-background text-foreground">
+  <RootProviders>{children}</RootProviders>
+</body>
     </html>
   )
 }

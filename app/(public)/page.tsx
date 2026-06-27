@@ -4,121 +4,93 @@ import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-[calc(100dvh-5rem)] overflow-hidden">
-      <section className="page-x mx-auto grid min-h-[calc(100dvh-5rem)] w-full max-w-6xl items-center gap-10 pb-12 pt-8 md:grid-cols-[minmax(0,0.95fr)_minmax(18rem,0.7fr)] md:gap-14 md:pb-16 md:pt-10">
-        <div className="relative z-10 max-w-[43rem] space-y-8 racinae-rise-in">
-          <div className="space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/80 sm:text-sm">
-              Votre histoire, un jour a la fois
+    <main className="relative min-h-dvh overflow-hidden bg-racinae-vitrine px-3 py-3 text-foreground sm:px-6 sm:py-4 lg:px-8">
+      <section className="mx-auto flex min-h-[calc(100dvh-1.5rem)] w-full max-w-6xl items-center justify-center">
+        <div className="premium-vitrine-card relative flex max-h-[calc(100dvh-1.5rem)] w-full overflow-hidden rounded-[1.65rem] px-4 py-5 sm:rounded-[2.5rem] sm:px-10 sm:py-8 lg:px-16 lg:py-10">
+          <div className="pointer-events-none absolute inset-0 bg-racinae-paper" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-[linear-gradient(to_top,rgb(154_118_87_/_0.10),transparent)]" />
+          <div className="pointer-events-none absolute -bottom-28 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full border border-primary/10" />
+          <div className="pointer-events-none absolute -bottom-44 left-1/2 h-[46rem] w-[46rem] -translate-x-1/2 rounded-full border border-life/10" />
+
+          <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center justify-center text-center">
+            <p className="mb-3 text-[0.58rem] font-semibold uppercase tracking-[0.36em] text-primary/80 sm:mb-5 sm:text-xs sm:tracking-[0.5em]">
+              Le livre de l&apos;enfance
             </p>
-            <div className="space-y-5">
-              <h1 className="font-heading text-[3.85rem] font-semibold leading-[0.9] text-foreground min-[360px]:text-[4.55rem] sm:text-[6.2rem] md:text-[7.15rem]">
-                Gardez ce que la vie efface doucement.
-              </h1>
-              <p className="max-w-[34rem] text-lg leading-8 text-foreground/82 sm:text-[1.35rem] sm:leading-10">
-                Quelques lignes pour retenir un visage, une saison, une voix,
-                un moment. Avec le temps, Racinae compose l&apos;histoire que
-                vous ne voulez pas oublier.
-              </p>
+
+            <h1 className="font-heading text-[3.05rem] font-semibold leading-none tracking-[0.08em] text-foreground min-[380px]:text-[3.7rem] sm:text-[6.5rem] sm:tracking-[0.13em] md:text-[7.7rem]">
+              RACINAE
+            </h1>
+
+            <div className="my-3 h-px w-20 bg-primary/20 sm:my-5 sm:w-28" />
+
+            <h2 className="max-w-3xl font-heading text-[1.95rem] font-semibold leading-[1.02] tracking-[-0.05em] text-foreground min-[380px]:text-[2.15rem] sm:text-[3rem] md:text-[3.55rem]">
+              Le premier livre
+              <br />
+              qui s&apos;écrit pendant
+              <br />
+              que votre enfant grandit.
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-[21,5rem] text-[0.86rem] leading-6 text-muted-foreground sm:mt-5 sm:max-w-2xl sm:text-base sm:leading-8">
+              Quelques minutes suffisent pour préserver les souvenirs, les petits
+              instants et les grandes étapes qui composeront, un jour, le livre
+              de son enfance.
+            </p>
+
+            <Button
+              asChild
+              size="lg"
+              className="mt-5 h-11 rounded-full px-7 text-sm shadow-[0_18px_42px_rgb(154_118_87_/_0.22)] sm:mt-7 sm:h-12 sm:px-8"
+            >
+              <Link href="/login">Commencer</Link>
+            </Button>
+
+            <p className="mt-5 font-heading text-[0.95rem] leading-7 text-foreground/62 sm:mt-7 sm:text-lg sm:leading-8">
+              Un souvenir aujourd&apos;hui.
+              <br />
+              Un trésor pour toute une vie.
+            </p>
+
+            <div className="relative mt-3 w-full max-w-[9.5rem] sm:mt-5 sm:max-w-[18rem] md:max-w-[21rem]">
+              <LifeTreeMark />
             </div>
           </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button asChild size="lg" className="h-14 px-8 text-base">
-              <Link href="/login">Ecrire mon premier souvenir</Link>
-            </Button>
-            <p className="max-w-xs text-sm leading-6 text-muted-foreground sm:pl-2">
-              Un espace prive. Aucun bruit. Rien a prouver.
-            </p>
-          </div>
-        </div>
-
-        <div className="relative z-0 mx-auto w-full max-w-[22rem] min-[390px]:max-w-[25rem] md:max-w-[27rem]">
-          <FirstMemoryPage />
         </div>
       </section>
     </main>
   )
 }
 
-function FirstMemoryPage() {
+function LifeTreeMark() {
   return (
     <div
       aria-hidden="true"
-      className="racinae-memory-float relative aspect-[0.78] w-full"
+      className="racinae-memory-float relative aspect-[1.3] w-full opacity-90"
     >
-      <div className="absolute inset-x-8 bottom-4 h-24 rounded-[100%] bg-primary/12 blur-3xl" />
-      <div className="absolute inset-0 rotate-[1.5deg] rounded-[2.25rem] border border-border/70 bg-card/82 shadow-[var(--shadow-soft)] backdrop-blur-2xl" />
-      <div className="absolute inset-3 rounded-[1.8rem] border border-border/60 bg-background/92 shadow-[inset_0_1px_0_rgb(255_255_255_/_78%)]" />
-
-      <div className="absolute inset-x-8 top-10 space-y-3">
-        <span className="block h-2 w-16 rounded-full bg-primary/25" />
-        <span className="block h-2 w-28 rounded-full bg-accent/55" />
-      </div>
+      <div className="absolute inset-x-10 bottom-2 h-24 rounded-[100%] bg-primary/12 blur-3xl" />
 
       <svg
-        className="absolute inset-x-0 top-[18%] mx-auto h-[52%] w-[74%]"
-        viewBox="0 0 260 260"
+        className="absolute inset-0 mx-auto h-full w-full"
+        viewBox="0 0 360 280"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M129 220C129 170 129 134 129 82"
-          stroke="var(--primary)"
-          strokeWidth="13"
-          strokeLinecap="round"
-        />
-        <path
-          d="M129 151C102 126 79 112 51 108"
-          stroke="var(--primary)"
-          strokeWidth="8"
-          strokeLinecap="round"
-          opacity="0.78"
-        />
-        <path
-          d="M130 132C154 104 181 90 211 86"
-          stroke="var(--primary)"
-          strokeWidth="8"
-          strokeLinecap="round"
-          opacity="0.78"
-        />
-        <path
-          d="M72 128C51 101 28 90 6 94C18 122 40 137 72 128Z"
-          fill="var(--life)"
-          opacity="0.82"
-        />
-        <path
-          d="M108 88C91 60 70 45 45 43C53 74 74 92 108 88Z"
-          fill="var(--accent)"
-          opacity="0.7"
-        />
-        <path
-          d="M160 84C176 55 198 39 224 36C216 69 194 88 160 84Z"
-          fill="var(--life)"
-          opacity="0.78"
-        />
-        <path
-          d="M190 120C216 98 239 91 258 99C238 124 214 132 190 120Z"
-          fill="var(--accent)"
-          opacity="0.68"
-        />
-        <path
-          d="M88 229C107 240 153 240 172 229"
-          stroke="var(--accent)"
-          strokeWidth="7"
-          strokeLinecap="round"
-          opacity="0.72"
-        />
-      </svg>
+        <path d="M180 240C180 181 180 141 180 80" stroke="var(--primary)" strokeWidth="10" strokeLinecap="round" />
+        <path d="M180 154C146 126 113 109 73 105" stroke="var(--primary)" strokeWidth="6" strokeLinecap="round" opacity="0.62" />
+        <path d="M181 138C215 106 251 89 291 84" stroke="var(--primary)" strokeWidth="6" strokeLinecap="round" opacity="0.62" />
+        <path d="M180 183C150 164 118 155 82 157" stroke="var(--primary)" strokeWidth="5" strokeLinecap="round" opacity="0.42" />
+        <path d="M181 178C214 153 247 143 284 145" stroke="var(--primary)" strokeWidth="5" strokeLinecap="round" opacity="0.42" />
 
-      <div className="absolute inset-x-8 bottom-10 space-y-3">
-        <p className="font-heading text-3xl font-semibold leading-none text-foreground">
-          Une premiere page
-        </p>
-        <p className="text-sm leading-6 text-muted-foreground">
-          Le debut d&apos;une histoire qui grandit avec vous.
-        </p>
-      </div>
+        <path d="M98 128C66 96 34 85 5 94C27 126 58 143 98 128Z" fill="var(--life)" opacity="0.56" />
+        <path d="M145 84C119 48 88 31 51 34C68 73 99 92 145 84Z" fill="var(--accent)" opacity="0.46" />
+        <path d="M219 80C244 44 276 25 314 27C299 69 265 91 219 80Z" fill="var(--life)" opacity="0.58" />
+        <path d="M265 122C302 92 334 84 358 96C330 127 299 139 265 122Z" fill="var(--accent)" opacity="0.42" />
+        <path d="M101 176C70 155 42 150 17 160C43 184 72 191 101 176Z" fill="var(--life)" opacity="0.38" />
+        <path d="M257 176C287 154 316 148 342 158C315 184 286 191 257 176Z" fill="var(--life)" opacity="0.36" />
+
+        <path d="M126 253C148 269 213 269 235 253" stroke="var(--accent)" strokeWidth="6" strokeLinecap="round" opacity="0.52" />
+        <path d="M142 265C162 274 199 274 218 265" stroke="var(--life)" strokeWidth="4" strokeLinecap="round" opacity="0.34" />
+      </svg>
     </div>
   )
 }

@@ -6,10 +6,11 @@ export default function HistoryPage() {
   return (
     <PageShell className="space-y-8">
       <SectionHeader
-        eyebrow="Mon Histoire"
-        title="Mon Histoire"
-        description="La chronologie intelligente est preparee. Les resumes IA viendront ensuite."
+        eyebrow="LE LIVRE"
+        title="Studio d'édition"
+        description="Prenez le temps de composer un livre unique."
       />
+
       <HistoryTimeline />
     </PageShell>
   )

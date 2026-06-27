@@ -12,10 +12,11 @@ export default async function EditJournalEntryPage({
   return (
     <PageShell className="space-y-8" size="narrow">
       <SectionHeader
-        eyebrow="Journal"
+        eyebrow="SOUVENIR"
         title="Modifier le souvenir"
-        description="Ajustez le texte sans perdre l'intention initiale."
+        description="Ajustez ce souvenir avant qu’il ne rejoigne les pages du livre de l’enfance."
       />
+
       <JournalEntryForm entryId={id} />
     </PageShell>
   )

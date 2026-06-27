@@ -30,18 +30,22 @@ export function JournalEntryForm({ entryId }: JournalEntryFormProps) {
   function handleSubmit(formData: FormData) {
     const id = entry?.id ?? crypto.randomUUID()
     const updatedAt = new Date().toISOString()
+
     const nextEntry: DemoJournalEntry = {
       id,
       title: String(formData.get("title") ?? ""),
       content: String(formData.get("content") ?? ""),
       mood: String(formData.get("mood") || "normal") as Mood,
-      entry_date: String(formData.get("entry_date") ?? new Date().toISOString().slice(0, 10)),
+      entry_date: String(
+        formData.get("entry_date") ?? new Date().toISOString().slice(0, 10)
+      ),
       created_at: entry?.created_at ?? updatedAt,
       updated_at: updatedAt,
     }
 
     setEntries((current) => {
       const exists = current.some((item) => item.id === id)
+
       return exists
         ? current.map((item) => (item.id === id ? nextEntry : item))
         : [nextEntry, ...current]
@@ -53,39 +57,48 @@ export function JournalEntryForm({ entryId }: JournalEntryFormProps) {
   return (
     <form action={handleSubmit} className="space-y-5">
       <div className="space-y-2">
-        <Label htmlFor="title">Titre</Label>
+        <Label htmlFor="title">Titre du souvenir</Label>
         <Input
           id="title"
           name="title"
           defaultValue={entry?.title ?? ""}
-          placeholder="Un titre simple"
+          placeholder="Ex. Sa première rentrée"
         />
       </div>
+
       <div className="space-y-2">
-        <Label htmlFor="entry_date">Date</Label>
+        <Label htmlFor="entry_date">Date du souvenir</Label>
         <Input
           id="entry_date"
           name="entry_date"
           type="date"
-          defaultValue={entry?.entry_date ?? new Date().toISOString().slice(0, 10)}
+          defaultValue={
+            entry?.entry_date ?? new Date().toISOString().slice(0, 10)
+          }
         />
       </div>
+
       <div className="space-y-2">
-        <Label htmlFor="mood">Emotion</Label>
+        <Label htmlFor="mood">Émotion associée</Label>
         <EmotionSelector defaultValue={entry?.mood ?? "normal"} />
       </div>
+
       <div className="space-y-2">
-        <Label htmlFor="content">Souvenir</Label>
+        <Label htmlFor="content">Récit du souvenir</Label>
         <Textarea
           id="content"
           name="content"
           defaultValue={entry?.content ?? ""}
-          placeholder="Que souhaitez-vous retenir ?"
+          placeholder="Racontez simplement ce moment, avec vos mots."
           required
         />
       </div>
+
       <MediaUploaderPlaceholder />
-      <Button size="lg">{entry ? "Enregistrer" : "Creer le souvenir"}</Button>
+
+      <Button size="lg">
+        {entry ? "Enregistrer les modifications" : "Enregistrer le souvenir"}
+      </Button>
     </form>
   )
 }

@@ -6,10 +6,11 @@ export default function NewJournalEntryPage() {
   return (
     <PageShell className="space-y-8" size="narrow">
       <SectionHeader
-        eyebrow="Journal"
-        title="Nouvelle entree"
-        description="Ecrivez simplement ce que vous souhaitez retenir."
+        eyebrow="SOUVENIR"
+        title="Écrire un souvenir"
+        description="Notez un moment, une phrase, une étape ou une émotion à conserver pour le livre de l’enfance."
       />
+
       <JournalEntryForm />
     </PageShell>
   )
