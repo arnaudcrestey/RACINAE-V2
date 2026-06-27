@@ -80,7 +80,7 @@ export function BookStudio() {
               <button
                 type="button"
                 onClick={() => setIsAtelierOpen((value) => !value)}
-                className="inline-flex shrink-0 items-center gap-2 rounded-full border bg-background px-4 py-2 text-sm"
+                className="inline-flex shrink-0 touch-manipulation items-center gap-2 rounded-full border bg-background px-4 py-2 text-sm"
               >
                 {isAtelierOpen ? "Fermer" : "Ouvrir"}
                 {isAtelierOpen ? (
@@ -99,7 +99,7 @@ export function BookStudio() {
                       <button
                         key={tool.label}
                         type="button"
-                        className="flex shrink-0 items-center gap-2 rounded-full border bg-background px-4 py-2 text-sm"
+                        className="flex shrink-0 touch-manipulation items-center gap-2 rounded-full border bg-background px-4 py-2 text-sm"
                       >
                         <tool.icon className="h-4 w-4" />
                         {tool.label}
@@ -109,7 +109,7 @@ export function BookStudio() {
 
                   <button
                     type="button"
-                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground"
+                    className="inline-flex shrink-0 touch-manipulation items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground"
                   >
                     <Download className="h-4 w-4" />
                     Télécharger le livre
@@ -120,10 +120,10 @@ export function BookStudio() {
           </section>
 
           <div className="w-full overflow-x-auto px-4 pb-4 sm:overflow-visible sm:px-0">
-            <div className="mx-auto min-w-[720px] max-w-5xl sm:min-w-0">
-              <div className="flex rounded-[30px] bg-[#d2bd96] p-3 shadow-[0_40px_110px_rgba(67,49,28,.30)]">
-                <section className="relative min-h-[540px] flex-1 rounded-l-[24px] bg-[#fffdf8] sm:min-h-[640px]">
-                  <div className="flex h-full min-h-[540px] items-center justify-center sm:min-h-[640px]">
+            <div className="mx-auto min-w-[620px] max-w-5xl sm:min-w-0">
+              <div className="flex rounded-[30px] bg-[#d2bd96] p-3 shadow-[0_28px_70px_rgba(67,49,28,.26)]">
+                <section className="relative min-h-[460px] flex-1 rounded-l-[24px] bg-[#fffdf8] sm:min-h-[640px]">
+                  <div className="flex h-full min-h-[460px] items-center justify-center sm:min-h-[640px]">
                     <p className="text-sm text-neutral-300">Page vierge</p>
                   </div>
 
@@ -132,14 +132,14 @@ export function BookStudio() {
                   </p>
                 </section>
 
-                <div className="w-[8px] bg-gradient-to-r from-[#b99f75] via-[#6f5536] to-[#d8c49c]" />
+                <div className="w-[6px] bg-gradient-to-r from-[#b99f75] via-[#6f5536] to-[#d8c49c]" />
 
-                <section className="relative min-h-[540px] flex-1 rounded-r-[24px] bg-[#fffdf8] sm:min-h-[640px]">
-                  <div className="flex h-full min-h-[540px] items-center justify-center sm:min-h-[640px]">
+                <section className="relative min-h-[460px] flex-1 rounded-r-[24px] bg-[#fffdf8] sm:min-h-[640px]">
+                  <div className="flex h-full min-h-[460px] items-center justify-center sm:min-h-[640px]">
                     <p className="text-sm text-neutral-300">Page vierge</p>
                   </div>
 
-                  {rightPage && (
+                                    {rightPage && (
                     <p className="absolute bottom-8 right-10 text-sm text-neutral-400">
                       {rightPage}
                     </p>
