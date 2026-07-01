@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   },
   description: appConfig.description,
   applicationName: appConfig.name,
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.png",
+    apple: "/apple-icon.png",
+  },
+
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
