@@ -9,11 +9,11 @@ export default function CapsulesPage() {
     <PageShell className="space-y-8">
       <SectionHeader
         eyebrow="Capsules"
-        title="Capsules du Temps"
+        title="Les courriers du Temps"
         description="Des messages prepares pour une date future."
       />
       <Button asChild>
-        <Link href="/app/capsules/new">Nouvelle capsule</Link>
+        <Link href="/app/capsules/new">Nouveau courrier</Link>
       </Button>
       <CapsuleList />
     </PageShell>

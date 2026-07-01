@@ -7,7 +7,7 @@ export default function NewCapsulePage() {
     <PageShell className="space-y-8" size="narrow">
       <SectionHeader
         eyebrow="Capsules"
-        title="Nouvelle capsule"
+        title="Nouveau courrier"
         description="Preparez un message pour demain, dans un an ou plus tard."
       />
       <CapsuleForm />

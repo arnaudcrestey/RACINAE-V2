@@ -1,4 +1,9 @@
-import type { Capsule, CapsuleRecipientKind, JournalEntry, Mood } from "@/types/database"
+import type {
+  Capsule,
+  CapsuleRecipientKind,
+  JournalEntry,
+  Mood,
+} from "@/types/database"
 
 export type DemoProfile = {
   fullName: string
@@ -32,6 +37,7 @@ export const defaultCapsules: DemoCapsule[] = [
     message: "J'espere que tu te souviendras de ce que tu voulais construire.",
     recipient_kind: "self",
     recipient_label: "Moi-meme",
+    sender_label: "Moi",
     open_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
     status: "scheduled",
     created_at: now,

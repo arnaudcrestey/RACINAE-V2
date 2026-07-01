@@ -7,11 +7,10 @@ type AppShellProps = {
 
 const navLinks = [
   { href: "/app", label: "A la une" },
-  { href: "/app/journal/new", label: "Écrire un souvenir" },
-  { href: "/app/journal", label: "Pages du livre" },
-  { href: "/app/history", label: "Le livre de l'enfance" },
-  { href: "/app/capsules", label: "Courriers du Temps" },
-  { href: "/app/capsules/new", label: "Nouvelle capsule temporelle" },
+  { href: "/app/journal/new", label: "Ajouter un souvenir" },
+  { href: "/app/history", label: "Le livre de mon enfance" },
+  { href: "/app/capsules/new", label: "Capsule temporelle" },
+  { href: "/app/capsules", label: "Les Courriers du Temps" },
   { href: "/app/profile", label: "Profil" },
   { href: "/app/settings", label: "Réglages" },
 ]
@@ -31,7 +30,7 @@ export function AppShell({ children }: AppShellProps) {
 
             <div className="hidden text-center md:block">
               <p className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-[#9B7658]">
-                Le livre de l’enfance
+                Le livre de mon enfance
               </p>
               <p className="mt-1 text-xs text-[#7A7168]">
                 Souvenir après souvenir
@@ -74,9 +73,9 @@ export function AppShell({ children }: AppShellProps) {
           <div className="my-4 h-px w-20 bg-[#D8C9B8]" />
 
           <p className="max-w-xl text-xs leading-6 text-[#7A7168] sm:text-sm sm:leading-7">
-  Écrire les pages du livre de l’enfance, préparer les Courriers du Temps
+  Le livre de mon enfance - Les Courriers du Temps
   <br className="hidden sm:block" />
-  {" "}et transmettre ce qui compte vraiment.
+  {" "}Transmettre ce qui compte vraiment.
 </p>
         </div>
       </footer>

@@ -30,6 +30,7 @@ export type Capsule = {
   title: string
   message: string
   recipient_kind: CapsuleRecipientKind
+  sender_label: string | null
   recipient_label: string | null
   open_at: string
   status: CapsuleStatus

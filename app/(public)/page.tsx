@@ -14,10 +14,10 @@ export default function HomePage() {
 
           <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center justify-center text-center">
             <p className="mb-3 text-[0.58rem] font-semibold uppercase tracking-[0.36em] text-primary/80 sm:mb-5 sm:text-xs sm:tracking-[0.5em]">
-              Le livre de l&apos;enfance
+              Le livre de mon enfance
             </p>
 
-            <h1 className="font-heading text-[3.05rem] font-semibold leading-none tracking-[0.08em] text-foreground min-[380px]:text-[3.7rem] sm:text-[6.5rem] sm:tracking-[0.13em] md:text-[7.7rem]">
+            <h1 className="font-heading text-[2.8rem] font-semibold leading-none tracking-[0.08em] text-foreground min-[380px]:text-[3.45rem] sm:text-[6.5rem] sm:tracking-[0.13em] md:text-[7.7rem]">
               RACINAE
             </h1>
 
@@ -31,7 +31,7 @@ export default function HomePage() {
               que votre enfant grandit.
             </h2>
 
-            <p className="mx-auto mt-4 max-w-[21,5rem] text-[0.86rem] leading-6 text-muted-foreground sm:mt-5 sm:max-w-2xl sm:text-base sm:leading-8">
+            <p className="mx-auto mt-4 max-w-[21.5rem] text-[0.86rem] leading-6 text-muted-foreground sm:mt-5 sm:max-w-2xl sm:text-base sm:leading-8">
               Quelques minutes suffisent pour préserver les souvenirs, les petits
               instants et les grandes étapes qui composeront, un jour, le livre
               de son enfance.
@@ -42,7 +42,7 @@ export default function HomePage() {
               size="lg"
               className="mt-5 h-11 rounded-full px-7 text-sm shadow-[0_18px_42px_rgb(154_118_87_/_0.22)] sm:mt-7 sm:h-12 sm:px-8"
             >
-              <Link href="/login">Commencer</Link>
+              <Link href="/page-pub">Commencer</Link>
             </Button>
 
             <p className="mt-5 font-heading text-[0.95rem] leading-7 text-foreground/62 sm:mt-7 sm:text-lg sm:leading-8">
@@ -75,21 +75,86 @@ function LifeTreeMark() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M180 240C180 181 180 141 180 80" stroke="var(--primary)" strokeWidth="10" strokeLinecap="round" />
-        <path d="M180 154C146 126 113 109 73 105" stroke="var(--primary)" strokeWidth="6" strokeLinecap="round" opacity="0.62" />
-        <path d="M181 138C215 106 251 89 291 84" stroke="var(--primary)" strokeWidth="6" strokeLinecap="round" opacity="0.62" />
-        <path d="M180 183C150 164 118 155 82 157" stroke="var(--primary)" strokeWidth="5" strokeLinecap="round" opacity="0.42" />
-        <path d="M181 178C214 153 247 143 284 145" stroke="var(--primary)" strokeWidth="5" strokeLinecap="round" opacity="0.42" />
+        <path
+          d="M180 240C180 181 180 141 180 80"
+          stroke="var(--primary)"
+          strokeWidth="10"
+          strokeLinecap="round"
+        />
+        <path
+          d="M180 154C146 126 113 109 73 105"
+          stroke="var(--primary)"
+          strokeWidth="6"
+          strokeLinecap="round"
+          opacity="0.62"
+        />
+        <path
+          d="M181 138C215 106 251 89 291 84"
+          stroke="var(--primary)"
+          strokeWidth="6"
+          strokeLinecap="round"
+          opacity="0.62"
+        />
+        <path
+          d="M180 183C150 164 118 155 82 157"
+          stroke="var(--primary)"
+          strokeWidth="5"
+          strokeLinecap="round"
+          opacity="0.42"
+        />
+        <path
+          d="M181 178C214 153 247 143 284 145"
+          stroke="var(--primary)"
+          strokeWidth="5"
+          strokeLinecap="round"
+          opacity="0.42"
+        />
 
-        <path d="M98 128C66 96 34 85 5 94C27 126 58 143 98 128Z" fill="var(--life)" opacity="0.56" />
-        <path d="M145 84C119 48 88 31 51 34C68 73 99 92 145 84Z" fill="var(--accent)" opacity="0.46" />
-        <path d="M219 80C244 44 276 25 314 27C299 69 265 91 219 80Z" fill="var(--life)" opacity="0.58" />
-        <path d="M265 122C302 92 334 84 358 96C330 127 299 139 265 122Z" fill="var(--accent)" opacity="0.42" />
-        <path d="M101 176C70 155 42 150 17 160C43 184 72 191 101 176Z" fill="var(--life)" opacity="0.38" />
-        <path d="M257 176C287 154 316 148 342 158C315 184 286 191 257 176Z" fill="var(--life)" opacity="0.36" />
+        <path
+          d="M98 128C66 96 34 85 5 94C27 126 58 143 98 128Z"
+          fill="var(--life)"
+          opacity="0.56"
+        />
+        <path
+          d="M145 84C119 48 88 31 51 34C68 73 99 92 145 84Z"
+          fill="var(--accent)"
+          opacity="0.46"
+        />
+        <path
+          d="M219 80C244 44 276 25 314 27C299 69 265 91 219 80Z"
+          fill="var(--life)"
+          opacity="0.58"
+        />
+        <path
+          d="M265 122C302 92 334 84 358 96C330 127 299 139 265 122Z"
+          fill="var(--accent)"
+          opacity="0.42"
+        />
+        <path
+          d="M101 176C70 155 42 150 17 160C43 184 72 191 101 176Z"
+          fill="var(--life)"
+          opacity="0.38"
+        />
+        <path
+          d="M257 176C287 154 316 148 342 158C315 184 286 191 257 176Z"
+          fill="var(--life)"
+          opacity="0.36"
+        />
 
-        <path d="M126 253C148 269 213 269 235 253" stroke="var(--accent)" strokeWidth="6" strokeLinecap="round" opacity="0.52" />
-        <path d="M142 265C162 274 199 274 218 265" stroke="var(--life)" strokeWidth="4" strokeLinecap="round" opacity="0.34" />
+        <path
+          d="M126 253C148 269 213 269 235 253"
+          stroke="var(--accent)"
+          strokeWidth="6"
+          strokeLinecap="round"
+          opacity="0.52"
+        />
+        <path
+          d="M142 265C162 274 199 274 218 265"
+          stroke="var(--life)"
+          strokeWidth="4"
+          strokeLinecap="round"
+          opacity="0.34"
+        />
       </svg>
     </div>
   )

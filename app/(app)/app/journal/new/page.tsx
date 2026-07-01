@@ -7,8 +7,8 @@ export default function NewJournalEntryPage() {
     <PageShell className="space-y-8" size="narrow">
       <SectionHeader
         eyebrow="SOUVENIR"
-        title="Écrire un souvenir"
-        description="Notez un moment, une phrase, une étape ou une émotion à conserver pour le livre de l’enfance."
+        title="Ajouter un souvenir"
+        description="Notez un moment, une phrase, une étape ou une émotion à conserver."
       />
 
       <JournalEntryForm />
