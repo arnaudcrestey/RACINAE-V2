@@ -1,3 +1,5 @@
+import { Suspense } from "react"
+
 import { PageShell } from "@/components/layout/page-shell"
 import { SectionHeader } from "@/components/primitives/section-header"
 import { HistoryTimeline } from "@/components/history/history-timeline"
@@ -11,7 +13,9 @@ export default function HistoryPage() {
         description="Prenez le temps de composer un livre unique."
       />
 
-      <HistoryTimeline />
+      <Suspense fallback={null}>
+        <HistoryTimeline />
+      </Suspense>
     </PageShell>
   )
 }
